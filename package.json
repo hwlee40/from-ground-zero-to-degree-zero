@@ -1,0 +1,15 @@
+{
+  "name": "akira",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html --public-url ./"
+  },
+  "author": "Jacob Hwan Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  }
+}

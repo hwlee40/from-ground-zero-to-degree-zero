@@ -1,0 +1,158 @@
+.essay_container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 40px;
+    margin: 0 20px 0 20px;
+}
+
+//Title
+.essay_title_container{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 100;
+    margin-bottom: 60px;
+    font-size: 40px;
+    z-index: 10;
+}
+
+.essay_title{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    transition: 0.4s;
+    overflow: visible;}
+
+//Paragraph
+.essay_body{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 410px;
+    font-family: Authentic;
+    font-size: 19px;
+    line-height: 158%;
+}
+.footnote{
+    margin-left: 2px;
+    margin-right: 2px;
+    font-family: Akira;
+    font-size: 21px;
+    position:relative;
+    top:-3px;
+}
+
+//Footnotes
+.footnote_container{
+    margin-top: 410px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 100;
+    z-index: 100;
+}
+.threeliner{
+    margin-top: 610px;
+}
+.footnote_container_inner{
+    margin-bottom: 40px;
+}
+.footnote_gap{
+    margin-bottom: 10px;
+}
+h4{
+    font-family: Akira;
+    font-weight: normal;
+    font-size: 40px;
+}
+.footnote_body{
+    font-family: Authentic;
+    font-size: 13px;
+    line-height: 150%;
+}
+
+//Image Basic
+$imagebasicwidth: 660px;
+
+.image_basic_container{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.4s;
+}
+.image_figure{
+}
+.image_image{
+    width: $imagebasicwidth;
+}
+.image_description{
+    font-family: Ortica;
+    font-size: 34px;
+    line-height: 125%;
+    width: $imagebasicwidth;
+}
+
+//Pullquote
+.pullquote{
+    z-index: 10;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-family: Ortica;
+    font-weight: 100;
+    line-height: 140%;
+    font-size: 34px;
+    max-width: $imagebasicwidth;
+    margin: 40px 0 40px 0;
+    transition: 0.4s;
+}
+.image_basic_container_translate{
+    transform: translate(21vw);
+}
+
+//ROWS
+.row1{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.row2{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top: 0;
+}
+.row3{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-top: 0;
+}
+.row4{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin-top: 0;
+}
+.row5{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    margin-top: 0;
+}
+.row6{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    margin-top: 0;
+}
+
+.parenthesis{
+    font-size: 200px;
+    position:relative;
+    top:-8px;
+    transition: 0.4s;
+}
