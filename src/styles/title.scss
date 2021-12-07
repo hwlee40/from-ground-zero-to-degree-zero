@@ -3,6 +3,15 @@ h1 {
     font-size: 230px;
     line-height: 76.5%;
     font-weight: 100;
+    @media only screen and (max-width: $breakpoint) {
+        font-size: 200px;
+    }
+    @media only screen and (max-width: $breakpointmobile) {
+        font-size: 100px;
+    }
+    @media only screen and (min-width: $breakpointmonitor) {
+        font-size: 300px;
+    }
 }
 
 .title{
@@ -12,8 +21,32 @@ h1 {
 .title_image1{
     height: 150px;
     margin-bottom: 2px;
+    display: inline-block;
+    @media only screen and (max-width: $breakpoint) {
+        height: 130px;
+    }
+    @media only screen and (max-width: $breakpointmobile) {
+        height: 70px;
+        margin-bottom: 0px;
+    }
+   
+    @media only screen and (min-width: $breakpointmonitor) {
+        height: 200px;
+    }
 }
 .title_image2{
     height: 130px;
     margin-bottom: 2px;
+    display: inline-block;
+    @media only screen and (max-width: $breakpoint) {
+        height: 120px;
+    }
+    @media only screen and (max-width: $breakpointmobile) {
+        height: 65px;
+        margin-bottom: 0px;
+    }
+   
+    @media only screen and (min-width: $breakpointmonitor) {
+        height: 180px;
+    }
 }

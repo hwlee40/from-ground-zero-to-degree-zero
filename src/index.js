@@ -1,8 +1,5 @@
 //SCROLL INDICATOR
-
-// When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
-
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -36,6 +33,15 @@ $("#essay5").click(function() {
         scrollTop: $("#tag5").offset().top
     }, 500);
 });
+
+//SCROLL TO TOP
+$("#top").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#body").offset().top
+    }, 500);
+});
+
+
 
 // RESIZING AND SHIFTING
 function resizeText1() {
@@ -189,5 +195,26 @@ function compileFaster(){
     shiftImage8();
 }
 
-setInterval(function(){compile()}, 300);
-setInterval(function(){compileFaster()}, 50);
+setInterval(function(){
+    if ($(window).width() > 1300) {
+        compile();
+     }
+     else if ($(window).width() > 900) {
+        $(".essay_title").css("font-size", "100px");
+     }
+}, 300);
+setInterval(function(){
+    if ($(window).width() > 1300) {
+        compileFaster();
+     }
+     else {
+        $("#shift1").removeClass("image_basic_container_translate");
+        $("#shift2").removeClass("image_basic_container_translate");
+        $("#shift3").removeClass("image_basic_container_translate");
+        $("#shift4").removeClass("image_basic_container_translate");
+        $("#shift5").removeClass("image_basic_container_translate");
+        $("#shift6").removeClass("image_basic_container_translate");
+        $("#shift7").removeClass("image_basic_container_translate");
+        $("#shift8").removeClass("image_basic_container_translate");
+     }
+}, 50);

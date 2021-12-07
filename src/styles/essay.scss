@@ -4,6 +4,13 @@
     grid-template-rows: auto auto auto auto;
     column-gap: 40px;
     margin: 0 20px 0 20px;
+
+    
+}
+@media only screen and (max-width: $breakpoint) {
+    .essay_container{
+
+    }
 }
 
 //Title
@@ -22,7 +29,41 @@
     position: sticky;
     top: 20px;
     transition: 0.4s;
-    overflow: visible;}
+    overflow: visible;
+    @media only screen and (max-width: $breakpoint) {
+        display: none;
+    }
+}
+.mobile_essay_title{
+    display: none;
+}
+
+    @media only screen and (max-width: $breakpoint) {
+        .title_break{
+            display: none;
+        }
+        .mobile_essay_title{
+            font-family: "Akira";
+            font-size: 200px;
+            line-height: 76.5%;
+            font-weight: 100;
+            display: block;
+            margin-bottom: 60px;
+        }
+    }
+    @media only screen and (max-width: $breakpointmobile) {
+        .title_break{
+            display: none;
+        }
+        .mobile_essay_title{
+            font-family: "Akira";
+            font-size: 100px;
+            line-height: 76.5%;
+            font-weight: 100;
+            display: block;
+            margin-bottom: 60px;
+        }
+    }
 
 //Paragraph
 .essay_body{
@@ -35,6 +76,14 @@
     font-size: 19px;
     line-height: 158%;
 }
+@media only screen and (max-width: $breakpoint) {
+    .essay_body{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-top: 0;
+    }
+}
+
 .footnote{
     margin-left: 2px;
     margin-right: 2px;
@@ -52,9 +101,34 @@
     grid-row-start: 1;
     grid-row-end: 100;
     z-index: 100;
+    @media only screen and (max-width: $breakpoint) {
+        margin-top: 60px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    @media only screen and (max-width: $breakpointmobile) {
+        margin-top: 60px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
 }
 .threeliner{
     margin-top: 610px;
+    @media only screen and (max-width: $breakpoint) {
+        margin-top: 0;
+    }
 }
 .footnote_container_inner{
     margin-bottom: 40px;
@@ -87,7 +161,11 @@ $imagebasicwidth: 660px;
     flex-direction: column;
     gap: 20px;
     transition: 0.4s;
+    @media only screen and (max-width: $breakpoint) {
+        margin-top: 40px;
+    }
 }
+
 .image_figure{
 }
 .image_image{
@@ -96,8 +174,20 @@ $imagebasicwidth: 660px;
 .image_description{
     font-family: Ortica;
     font-size: 34px;
-    line-height: 125%;
+    line-height: 130%;
     width: $imagebasicwidth;
+    max-width: $imagebasicwidth;
+    @media only screen and (max-width: $breakpoint) {
+        font-size: 27px;
+    }
+}
+@media only screen and (max-width: $breakpoint) {
+    .image_image{
+        width: 100%;
+    }
+    .image_description{
+        width: 100%;
+    }
 }
 
 //Pullquote
@@ -109,7 +199,7 @@ $imagebasicwidth: 660px;
     grid-row-end: 3;
     font-family: Ortica;
     font-weight: 100;
-    line-height: 140%;
+    line-height: 130%;
     font-size: 34px;
     max-width: $imagebasicwidth;
     margin: 40px 0 40px 0;
@@ -117,6 +207,9 @@ $imagebasicwidth: 660px;
 }
 .image_basic_container_translate{
     transform: translate(21vw);
+    @media only screen and (min-width: $breakpointmonitor) {
+        transform: translate(20.5vw);
+    }
 }
 
 //ROWS
@@ -150,9 +243,59 @@ $imagebasicwidth: 660px;
     margin-top: 0;
 }
 
+.row4_mobile{
+    @media only screen and (max-width: $breakpoint) {
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+}
+.row5_mobile{
+    @media only screen and (max-width: $breakpoint) {
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+}
+.row6_mobile{
+    @media only screen and (max-width: $breakpoint) {
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+}
+.row7_mobile{
+    @media only screen and (max-width: $breakpoint) {
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+}
+.row8_mobile{
+    @media only screen and (max-width: $breakpoint) {
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+}
+
+.footnote_margin_mobile{
+    margin-top: 100px;
+}
+.image_margin_mobile{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .parenthesis{
     font-size: 200px;
     position:relative;
     top:-8px;
     transition: 0.4s;
 }
+
+//BACK TOP
+.back_top{
+    margin-top: 30px;
+    cursor: pointer;
+}
+.back_top:hover {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $red;
+  }

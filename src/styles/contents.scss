@@ -5,6 +5,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+    @media only screen and (max-width: $breakpointmobile) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 .contents_title{
     margin-left:20px;
@@ -17,6 +21,7 @@
     grid-gap: 30px;
     transition: 0.1s;
     cursor: pointer;
+    width: 100%;
 }
 .contents_button_container:hover {
     color: transparent;
@@ -27,8 +32,14 @@
     font-size: 70px;
     line-height: 80%;
     margin-top: 2px;
+    @media only screen and (max-width: $breakpoint) {
+        font-size: 50px;
+    }
 }
 .contents_button_title{
     font-size: 70px;
     line-height: 80%;
+    @media only screen and (max-width: $breakpoint) {
+        font-size: 50px;
+    }
 }

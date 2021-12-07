@@ -1,3 +1,7 @@
+$breakpointmobile: 800px;
+$breakpoint: 1300px;
+$breakpointmonitor: 1900px;
+
 //Fonts
 @import 'fonts', 'colors';
 
@@ -13,11 +17,18 @@ html{
 }
 body{
     margin: 0;
+    position: relative;
     background: $beige;
+    @media only screen and (max-width: $breakpoint) {
+        overflow-x: hidden;
+    }
 }
 
 .break{
     height: 250px;
+    @media only screen and (max-width: $breakpointmobile) {
+        height: 150px;
+    }
 }
 .divider{
     width: 100px;
@@ -25,6 +36,11 @@ body{
     background-color: black;
     margin-bottom: 40px;
     margin-left: 20px;
+    @media only screen and (max-width: $breakpointmobile) {
+        width: 60px;
+        height: 15px;
+        margin-bottom: 30px;
+    }
 }
 
 a{
