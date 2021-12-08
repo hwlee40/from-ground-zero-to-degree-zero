@@ -275,7 +275,9 @@ $imagebasicwidth: 660px;
 }
 
 .footnote_margin_mobile{
-    margin-top: 100px;
+    @media only screen and (max-width: $breakpoint) {
+        margin-top: 100px;
+    }
 }
 .image_margin_mobile{
     margin-top: 40px;
