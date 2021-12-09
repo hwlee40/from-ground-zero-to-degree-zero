@@ -24,6 +24,13 @@ body{
     }
 }
 
+::selection {
+    background: rgba(238, 0, 0, 0.4);
+  }
+  ::-moz-selection {
+    background: $red;
+  }
+
 .break{
     height: 250px;
     @media only screen and (max-width: $breakpointmobile) {
