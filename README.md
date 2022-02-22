@@ -3,7 +3,7 @@
 🔗 Visit the site hosted on GitHub Pages [Here](https://hwlee40.github.io/from-ground-zero-to-degree-zero/).
 
 
-## Some development commands
+## Some development commands (mostly for me haha)
 Parcel development server:
 ```
 npm run dev
